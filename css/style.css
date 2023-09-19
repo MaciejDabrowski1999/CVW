@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+nav {
+  background-color: rgb(235, 235, 235);
+}
+nav .menu-tools {
+  display: flex;
+  justify-content: space-between;
+}
+nav .menu-tools .logo {
+  margin: 20px;
+  background-image: none;
+}
+nav .menu-tools .menu-button {
+  padding: 15px;
+  margin: 20px;
+}
+nav .menu-list {
+  display: none;
+  position: relative;
+  left: -100%;
+  transition: display 0.3s, left 0.5;
+}/*# sourceMappingURL=style.css.map */

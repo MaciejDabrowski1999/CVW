@@ -4,7 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&family=Montserrat:wght@100;400;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/5b34c87937.js" crossorigin="anonymous"></script>
     <title>Maciej Dąbrowski Website</title>
 </head>
 
@@ -13,21 +19,26 @@
         <nav id="menu">
             <div class="menu-tools">
                 <div class="logo"></div>
-                <button class="menu-button"></button>
+                <button class="menu-button"><i class="fa-solid fa-bars"></i></button>
             </div>
             <ul class="menu-list">
                 <li class="menu-link"><a href="#menu">Menu</a></li>
                 <li class="menu-link"><a href="#offer">Oferta</a></li>
-                <li class="menu-link"><a href="#portfolio">portfolio</a></li>
+                <li class="menu-link"><a href="#portfolio">Portfolio</a></li>
                 <li class="menu-link"><a href="#form">Kontakt</a></li>
             </ul>
         </nav>
+
         <div class="banner">
-            <div class="banner-content">
-                <h1>Oferta</h1>
-                <p>Idealna strona właśnie dla ciebie</p>
+            <div class="banner-pic">
+                <div class="banner-content">
+                    <h1>Oferta</h1>
+                    <p>Idealna strona właśnie dla ciebie</p>
+                </div>
+                <div class="banner-btn">
+                    <button class="offer">Oferta</button>
+                </div>
             </div>
-            <div class="pic"><button class="offer">Sprawdź</button></div>
         </div>
         <div class="advantages">
             <button class="advantages-left"></button>
@@ -35,12 +46,17 @@
             <button class="advantages-right"></button>
         </div>
         <div class="portfolio" id="portfolio">
-            <div class="portfolio-box">1</div>
-            <div class="portfolio-box">2</div>
-            <div class="portfolio-box">3</div>
-            <div class="portfolio-box">4</div>
-            <div class="portfolio-box">5</div>
-            <div class="portfolio-box">6</div>
+            <h2 class="portfolio-title">
+                Portfolio
+            </h2>
+            <ul class="portfolio-list">
+                <li class="portfolio-box">1</li>
+                <li class="portfolio-box">2</li>
+                <li class="portfolio-box">3</li>
+                <li class="portfolio-box">4</li>
+                <li class="portfolio-box">5</li>
+                <li class="portfolio-box">6</li>
+            </ul>
         </div>
         <div class="form" id="form">
             <div class="form-content"></div>

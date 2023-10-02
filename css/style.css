@@ -6,14 +6,15 @@
 
 body {
   font-family: "Comfortaa", cursive;
+  background-color: #333;
 }
 body a {
   text-decoration: none;
-  color: #333;
+  color: rgb(235, 235, 235);
 }
 
 nav {
-  background-color: rgb(235, 235, 235);
+  background-color: #1750b3;
 }
 nav .menu-tools {
   display: flex;
@@ -33,10 +34,12 @@ nav .menu-tools .menu-button {
   border: none;
   cursor: pointer;
   margin: 20px;
+  background-color: transparent;
+  color: #ffc03b;
 }
 nav .menu-list {
   display: none;
-  color: #333;
+  color: rgb(235, 235, 235);
   text-align: center;
   font-size: 36px;
   z-index: 100;
@@ -45,24 +48,52 @@ nav .menu-list {
   transition: display 0.3s, left 0.5;
 }
 
+.banner .banner-shadow {
+  position: absolute;
+  z-index: 1;
+}
+.banner .banner-shadow .shadow {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.banner .banner-shadow img {
+  width: 100%;
+  height: auto;
+}
 .banner .banner-pic {
+  position: relative;
+  z-index: 2;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 300px;
+  z-index: 3;
 }
 .banner .banner-pic div {
   margin: 10px;
 }
 .banner .banner-pic .banner-content {
+  color: rgb(235, 235, 235);
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 .banner .banner-pic .banner-btn .offer {
+  color: rgb(235, 235, 235);
   width: 100px;
   height: 25px;
   border-radius: 5px;
-  border: 1px solid black;
+  border: 1px solid rgb(235, 235, 235);
   background-color: transparent;
+}
+.banner .banner-pic .banner-btn .offer:active {
+  background-color: #ffc03b;
+}
+
+.advantages {
+  height: 350px;
+}
+.advantages img {
+  height: 300px;
 }/*# sourceMappingURL=style.css.map */

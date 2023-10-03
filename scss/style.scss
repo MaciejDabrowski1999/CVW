@@ -16,9 +16,21 @@ body {
 
 nav {
 	background-color: c.$third-color;
+	position: sticky;
+	z-index: 100;
+	top: 0;
+	width: 100%;
+	ol,
+	ul,
+	dl {
+		padding: 0;
+		margin: 0;
+	}
 	.menu-tools {
 		display: flex;
 		justify-content: space-between;
+		height: 100px;
+
 		.logo {
 			width: 150px;
 			height: auto;
@@ -39,41 +51,38 @@ nav {
 	}
 	.menu-list {
 		display: none;
-		color: c.$primary-font-color;
 		text-align: center;
 		font-size: 36px;
 		z-index: 100;
 		position: relative;
 		left: -100%;
-		transition: display 0.3s, left 0.5;
+		height: 100vh;
+		background-color: #fff;
+		.menu-link {
+			list-style: none;
+			a {
+				color: c.$third-color;
+			}
+		}
+	}
+	.menu-list:last-child {
+		padding: 0 0 10px 0;
 	}
 }
 .banner {
-	.banner-shadow {
+	position: relative;
+	height: 300px;
+	.banner-content {
 		position: absolute;
-		z-index: 1;
-		.shadow {
-			height: 100%;
-			width: 100%;
-			position: absolute;
-			background-color: rgba(0, 0, 0, 0.5);
-		}
-		img {
-			width: 100%;
-			height: auto;
-		}
-	}
-	.banner-pic {
-		position: relative;
-		z-index: 2;
 		display: flex;
 		justify-content: center;
 		flex-direction: column;
-		z-index: 3;
+		height: 100%;
+		z-index: 1;
 		div {
 			margin: 10px;
 		}
-		.banner-content {
+		.banner-text {
 			color: c.$primary-font-color;
 			display: flex;
 			justify-content: center;
@@ -91,7 +100,20 @@ nav {
 			}
 			.offer:active {
 				background-color: c.$secondary-complementary;
+				color: c.$third-color;
 			}
+		}
+	}
+	.banner-shadow {
+		position: absolute;
+		.shadow {
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			background-color: rgba(0, 0, 0, 0.5);
+		}
+		img {
+			height: 300px;
 		}
 	}
 }
@@ -99,5 +121,10 @@ nav {
 	height: 350px;
 	img {
 		height: 300px;
+	}
+	.carousel-control-next {
+		.carousel-control-next-icon {
+			color: black;
+		}
 	}
 }

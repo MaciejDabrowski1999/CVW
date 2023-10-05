@@ -118,13 +118,60 @@ nav {
 	}
 }
 .advantages {
-	height: 350px;
-	img {
-		height: 300px;
+	margin: 50px 0 0 0;
+	height: 300px;
+	.carousel.slide {
+		.carousel-inner {
+			.carousel-item {
+				width: 100%;
+				height: 300px;
+				.carousel-content {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					i {
+						font-size: 48px;
+						color: c.$main-theme;
+					}
+					h3,
+					p {
+						text-align: center;
+						width: 80%;
+					}
+				}
+			}
+		}
 	}
-	.carousel-control-next {
-		.carousel-control-next-icon {
-			color: black;
+	[class*='carousel-control'] {
+		color: black;
+	}
+}
+.portfolio {
+	.portfolio-text {
+		text-align: center;
+		h2 {
+			font-size: 36px;
+			text-transform: uppercase;
+		}
+		i {
+			font-size: 36px;
+		}
+	}
+
+	.portfolio-list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		padding: 0;
+		.portfolio-box {
+			list-style: none;
+			width: 50%;
+			height: 100px;
+			background-image: url(/assets/Mobile/Przelicznuk\ walut.avif);
+			background-size: cover;
+			background-repeat: no-repeat;
 		}
 	}
 }

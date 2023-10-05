@@ -115,11 +115,54 @@ nav .menu-list:last-child {
 }
 
 .advantages {
-  height: 350px;
-}
-.advantages img {
+  margin: 50px 0 0 0;
   height: 300px;
 }
-.advantages .carousel-control-next .carousel-control-next-icon {
+.advantages .carousel.slide .carousel-inner .carousel-item {
+  width: 100%;
+  height: 300px;
+}
+.advantages .carousel.slide .carousel-inner .carousel-item .carousel-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.advantages .carousel.slide .carousel-inner .carousel-item .carousel-content i {
+  font-size: 48px;
+  color: #3b83ff;
+}
+.advantages .carousel.slide .carousel-inner .carousel-item .carousel-content h3,
+.advantages .carousel.slide .carousel-inner .carousel-item .carousel-content p {
+  text-align: center;
+  width: 80%;
+}
+.advantages [class*=carousel-control] {
   color: black;
+}
+
+.portfolio .portfolio-text {
+  text-align: center;
+}
+.portfolio .portfolio-text h2 {
+  font-size: 36px;
+  text-transform: uppercase;
+}
+.portfolio .portfolio-text i {
+  font-size: 36px;
+}
+.portfolio .portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+.portfolio .portfolio-list .portfolio-box {
+  list-style: none;
+  width: 50%;
+  height: 100px;
+  background-image: url(/assets/Mobile/Przelicznuk\ walut.avif);
+  background-size: cover;
+  background-repeat: no-repeat;
 }/*# sourceMappingURL=style.css.map */

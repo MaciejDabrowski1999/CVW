@@ -35,10 +35,10 @@ nav {
 			width: 150px;
 			height: auto;
 			margin: 20px;
-			background-image: url('/assets/Logo_MD_mobile.svg');
-			background-size: contain;
-			background-repeat: no-repeat;
-			background-position: center;
+			// background-image: url('/assets/Logo_MD_mobile.svg');
+			// background-size: contain;
+			// background-repeat: no-repeat;
+			// background-position: center;
 		}
 		.menu-button {
 			font-size: 36px;
@@ -156,6 +156,7 @@ nav {
 		}
 		i {
 			font-size: 36px;
+			color: c.$main-theme;
 		}
 	}
 
@@ -190,5 +191,60 @@ nav {
 		.portfolio-box:nth-child(6) {
 			background-image: url(/assets/Mobile/notes.webp);
 		}
+	}
+}
+.form {
+	text-align: center;
+	margin: 20px 0;
+	form {
+		width: 100%;
+
+		.inputs {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			input {
+				height: 50px;
+				width: 80%;
+				border-radius: 5px;
+				margin: 10px;
+				padding: 0 0 0 10px;
+				border-color: c.$secondary-color;
+			}
+			::placeholder {
+				font-family: 'Comfortaa', cursive;
+			}
+			button {
+				width: 60%;
+				height: 30px;
+				color: #fff;
+				border: none;
+				border-radius: 5px;
+				background-color: c.$secondary-color;
+			}
+			.form-text-message {
+				height: 200px;
+			}
+		}
+	}
+}
+footer {
+	background-color: c.$third-color;
+	width: 100%;
+	height: 100px;
+	color: c.$secondary-complementary;
+	.footer-links {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		a {
+			font-size: 36px;
+			margin: 0 10px;
+			color: c.$secondary-complementary;
+		}
+	}
+	p {
+		text-align: center;
 	}
 }

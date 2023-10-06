@@ -196,6 +196,9 @@ nav {
 .form {
 	text-align: center;
 	margin: 20px 0;
+	.form-content {
+		color: c.$main-theme;
+	}
 	form {
 		width: 100%;
 

@@ -1,244 +1,246 @@
 * {
-	box-sizing: border-box;
-	padding: 0;
-	margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-	font-family: 'Comfortaa', cursive;
-	background-color: #333;
+  font-family: "Comfortaa", cursive;
+  background-color: #333;
 }
 body a {
-	text-decoration: none;
-	color: rgb(235, 235, 235);
+  text-decoration: none;
+  color: rgb(235, 235, 235);
 }
 
 nav {
-	background-color: #1750b3;
-	position: sticky;
-	z-index: 100;
-	top: 0;
-	width: 100%;
+  background-color: rgba(249, 249, 249, 0.85);
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  width: 100%;
 }
 nav ol,
 nav ul,
 nav dl {
-	padding: 0;
-	margin: 0;
+  padding: 0;
+  margin: 0;
 }
 nav .menu-tools {
-	display: flex;
-	justify-content: space-between;
-	height: 80px;
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
 }
 nav .menu-tools .logo {
-	width: 150px;
-	height: auto;
-	margin: 20px;
+  width: 150px;
+  height: auto;
+  margin: 20px;
 }
 nav .menu-tools .menu-button {
-	font-size: 36px;
-	border: none;
-	cursor: pointer;
-	margin: 20px;
-	background-color: transparent;
-	color: #ffc03b;
+  font-size: 36px;
+  border: none;
+  cursor: pointer;
+  margin: 0 20px 0 0;
+  background-color: transparent;
+  color: rgb(0, 0, 0);
 }
 nav .menu-list {
-	display: none;
-	text-align: center;
-	font-size: 36px;
-	z-index: 100;
-	position: relative;
-	left: -100%;
-	height: 100vh;
-	background-color: #fff;
+  display: none;
+  text-align: center;
+  font-size: 36px;
+  z-index: 100;
+  position: relative;
+  left: -100%;
+  height: 100vh;
+  background-color: #fff;
 }
 nav .menu-list .menu-link {
-	list-style: none;
+  list-style: none;
 }
 nav .menu-list .menu-link a {
-	color: #1750b3;
+  color: #0c0db0;
 }
 nav .menu-list:last-child {
-	padding: 0 0 10px 0;
+  padding: 0 0 10px 0;
 }
 
 .banner {
-	position: relative;
-	height: 300px;
+  position: relative;
+  height: 300px;
 }
 .banner .banner-content {
-	position: absolute;
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	height: 100%;
-	z-index: 1;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  z-index: 1;
 }
 .banner .banner-content div {
-	margin: 10px;
+  margin: 10px;
 }
 .banner .banner-content .banner-text {
-	color: rgb(235, 235, 235);
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
+  color: rgb(235, 235, 235);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 .banner .banner-content .banner-btn .offer {
-	color: rgb(235, 235, 235);
-	width: 100px;
-	height: 25px;
-	border-radius: 5px;
-	border: 1px solid rgb(235, 235, 235);
-	background-color: transparent;
+  color: rgb(235, 235, 235);
+  width: 100px;
+  height: 25px;
+  border-radius: 5px;
+  border: 1px solid rgb(235, 235, 235);
+  background-color: transparent;
 }
 .banner .banner-content .banner-btn .offer:active {
-	background-color: #ffc03b;
-	color: #1750b3;
+  background-color: #0d3cba;
+  color: rgb(235, 235, 235);
 }
 .banner .banner-shadow {
-	position: absolute;
+  position: absolute;
 }
 .banner .banner-shadow .shadow {
-	height: 100%;
-	width: 100%;
-	position: absolute;
-	background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .banner .banner-shadow img {
-	height: 300px;
+  height: 300px;
 }
 
 .advantages {
-	margin: 50px 0 0 0;
-	height: 300px;
+  margin: 50px 0 0 0;
+  height: 300px;
 }
 .advantages .carousel.slide .carousel-inner .carousel-item {
-	width: 100%;
-	height: 300px;
+  width: 100%;
+  height: 300px;
 }
 .advantages .carousel.slide .carousel-inner .carousel-item .carousel-content {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .advantages .carousel.slide .carousel-inner .carousel-item .carousel-content i {
-	font-size: 48px;
-	color: #3b83ff;
+  font-size: 48px;
+  color: #1360a4;
 }
 .advantages .carousel.slide .carousel-inner .carousel-item .carousel-content h3,
 .advantages .carousel.slide .carousel-inner .carousel-item .carousel-content p {
-	text-align: center;
-	width: 80%;
+  text-align: center;
+  width: 80%;
 }
-.advantages [class*='carousel-control'] {
-	color: black;
+.advantages [class*=carousel-control] {
+  color: black;
 }
 
 .portfolio .portfolio-text {
-	text-align: center;
+  text-align: center;
 }
 .portfolio .portfolio-text h2 {
-	font-size: 36px;
-	text-transform: uppercase;
+  font-size: 36px;
+  text-transform: uppercase;
 }
 .portfolio .portfolio-text i {
-	font-size: 36px;
-	color: #3b83ff;
+  font-size: 36px;
+  color: #1360a4;
 }
 .portfolio .portfolio-list {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-	padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
 }
 .portfolio .portfolio-list .portfolio-box {
-	list-style: none;
-	width: 50%;
-	height: 100px;
-	background-size: cover;
-	background-repeat: no-repeat;
+  list-style: none;
+  width: 50%;
+  height: 100px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .portfolio .portfolio-list .portfolio-box:nth-child(1) {
-	background-image: url(/assets/Mobile/Przelicznuk\ walut.webp);
+  background-image: url(/assets/Mobile/Przelicznuk\ walut.webp);
 }
 .portfolio .portfolio-list .portfolio-box:nth-child(2) {
-	background-image: url(/assets/Mobile/mobile-version.webp);
+  background-image: url(/assets/Mobile/mobile-version.webp);
 }
 .portfolio .portfolio-list .portfolio-box:nth-child(3) {
-	background-image: url(/assets/Mobile/todolist.webp);
+  background-image: url(/assets/Mobile/todolist.webp);
 }
 .portfolio .portfolio-list .portfolio-box:nth-child(4) {
-	background-image: url(/assets/Mobile/dabrowskiwebsite.webp);
+  background-image: url(/assets/Mobile/dabrowskiwebsite.webp);
 }
 .portfolio .portfolio-list .portfolio-box:nth-child(5) {
-	background-image: url(/assets/Mobile/ai4sectors.webp);
+  background-image: url(/assets/Mobile/ai4sectors.webp);
 }
 .portfolio .portfolio-list .portfolio-box:nth-child(6) {
-	background-image: url(/assets/Mobile/notes.webp);
+  background-image: url(/assets/Mobile/notes.webp);
 }
 
 .form {
-	text-align: center;
-	margin: 20px 0;
+  text-align: center;
+  margin: 20px 0;
 }
 .form .form-content {
-	color: #3b83ff;
+  color: #1360a4;
 }
 .form form {
-	width: 100%;
+  width: 100%;
 }
 .form form .inputs {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .form form .inputs input {
-	height: 50px;
-	width: 80%;
-	border-radius: 5px;
-	margin: 10px;
-	padding: 0 0 0 10px;
-	border-color: #5493ff;
+  height: 50px;
+  width: 80%;
+  margin: 10px;
+  padding: 0 0 0 10px;
+  border-color: rgb(235, 235, 235);
 }
 .form form .inputs ::-moz-placeholder {
-	font-family: 'Comfortaa', cursive;
+  font-family: "Comfortaa", cursive;
 }
 .form form .inputs ::placeholder {
-	font-family: 'Comfortaa', cursive;
+  font-family: "Comfortaa", cursive;
 }
 .form form .inputs button {
-	width: 60%;
-	height: 30px;
-	color: #fff;
-	border: none;
-	border-radius: 5px;
-	background-color: #5493ff;
+  width: 60%;
+  height: 30px;
+  color: #fff;
+  border: none;
+  background-color: #1360a4;
 }
 .form form .inputs .form-text-message {
-	height: 200px;
+  margin: 10px;
+  padding: 0 0 0 10px;
+  inline-size: 80%;
+  overflow-wrap: break-word;
+  overflow: visible;
 }
 
 footer {
-	background-color: #1750b3;
-	width: 100%;
-	height: 100px;
-	color: #ffc03b;
+  background-color: rgba(249, 249, 249, 0.85);
+  width: 100%;
+  height: 100px;
+  color: rgb(0, 0, 0);
 }
 footer .footer-links {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 footer .footer-links a {
-	font-size: 36px;
-	margin: 0 10px;
-	color: #ffc03b;
+  font-size: 36px;
+  margin: 0 10px;
+  color: rgb(0, 0, 0);
 }
 footer p {
-	text-align: center;
-} /*# sourceMappingURL=style.css.map */
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */

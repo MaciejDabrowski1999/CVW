@@ -286,6 +286,12 @@ nav #menu-toggle:checked + .menu-button-container .menu-button::after {
   overflow-wrap: break-word;
   overflow: visible;
 }
+.form form .inputs [class*=error-form] {
+  color: red;
+}
+.form .desc {
+  color: rgb(235, 235, 235);
+}
 
 footer {
   background-color: rgba(249, 249, 249, 0.85);
@@ -305,4 +311,8 @@ footer .footer-links a {
 }
 footer p {
   text-align: center;
+}
+
+.input-error {
+  border: 3px solid red;
 }/*# sourceMappingURL=style.css.map */

@@ -132,15 +132,18 @@
             <h3 class="form-content">Skontaktuj się ze mną</h3>
             <form action="" method="post">
                 <div class="inputs">
-                    <input type="text" class="name" id="name" placeholder="Imię i nazwisko">
+                    <input type="text" class="name" id="name" placeholder="Imię i nazwisko*">
+                    <div class="error-form-name"></div>
                     <input type="tel" class="telephone" id="telephone" placeholder="Telefon">
-                    <input type="text" class="mail" id="mail" placeholder="Adres mailowy">
+                    <div class="error-form-phone"></div>
+                    <input type="email" class="email" id="email" placeholder="Adres mailowy*">
+                    <div class="error-form-mail"></div>
                     <textarea type="text" class="form-text-message" id="message" placeholder="Wiadomość" rows="5"
                         cols="33"></textarea>
                     <button class="send">Wyślij</button>
                 </div>
             </form>
-
+            <p class="desc">*pola obowiązkowe</p>
         </div>
         <footer>
             <div class="footer-links">

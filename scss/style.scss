@@ -300,7 +300,13 @@ nav {
 				overflow-wrap: break-word;
 				overflow: visible;
 			}
+			[class*='error-form'] {
+				color: red;
+			}
 		}
+	}
+	.desc {
+		color: c.$primary-font-color;
 	}
 }
 footer {
@@ -321,4 +327,7 @@ footer {
 	p {
 		text-align: center;
 	}
+}
+.input-error {
+	border: 3px solid red;
 }

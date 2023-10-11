@@ -37,9 +37,12 @@ nav .menu {
   margin: 0;
   padding: 0;
 }
-nav .menu > li {
+nav .menu li {
   margin: 0 1rem;
   overflow: hidden;
+}
+nav .menu li a {
+  color: rgb(0, 0, 0);
 }
 nav .menu-button-container {
   display: none;
@@ -103,7 +106,6 @@ nav #menu-toggle:checked + .menu-button-container .menu-button::after {
     justify-content: center;
     align-items: center;
     width: 100%;
-    color: rgb(0, 0, 0);
     background: rgb(249, 249, 249);
     height: 0;
     margin: 0;
@@ -147,6 +149,9 @@ nav #menu-toggle:checked + .menu-button-container .menu-button::after {
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+.banner .banner-content .banner-btn {
+  color: rgb(235, 235, 235);
 }
 .banner .banner-content .banner-btn .offer {
   color: rgb(235, 235, 235);
@@ -313,6 +318,58 @@ footer p {
   text-align: center;
 }
 
-.input-error {
-  border: 3px solid red;
+@media (min-width: 768px) {
+  .banner {
+    height: 500px;
+    padding: 0;
+  }
+  .banner .banner-content {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .banner .banner-content .banner-text {
+    text-align: center;
+  }
+  .banner .banner-content .banner-btn {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .banner .banner-content .banner-btn p {
+    font-size: 24px;
+    text-align: center;
+    margin: 0px 20px 20px 20px;
+  }
+  .banner .banner-content .banner-btn .offer {
+    height: 50px;
+    width: 300px;
+    border: 3px solid rgb(235, 235, 235);
+  }
+  .banner .banner-shadow img {
+    height: 500px;
+  }
+  .advantages {
+    height: 500px;
+  }
+  .advantages .carousel.slide .carousel-inner .carousel-item {
+    height: 500px;
+  }
+  .advantages .carousel.slide .carousel-inner .carousel-item.active {
+    display: flex;
+  }
+  .advantages .carousel.slide .carousel-item-next,
+  .advantages .carousel.slide .carousel-item-prev,
+  .advantages .carousel.slide .carousel-item.active {
+    display: flex;
+    justify-content: center;
+  }
+  .portfolio .portfolio-list .portfolio-box {
+    width: 33%;
+    height: 200px;
+    background-position: center;
+  }
 }/*# sourceMappingURL=style.css.map */

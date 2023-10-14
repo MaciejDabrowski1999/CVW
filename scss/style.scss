@@ -166,22 +166,33 @@ nav {
 				width: 100px;
 				height: 25px;
 				border: 1px solid c.$primary-font-color;
-
+				transition: background-color 0.5s;
 				background-color: transparent;
 			}
 			.offer:active {
-				background-color: c.$secondary-color;
+				background-color: c.$secondary-complementary;
 				color: c.$primary-font-color;
 			}
 		}
 	}
 	.banner-shadow {
+		width: 100%;
+		height: 100%;
 		position: absolute;
 		.shadow {
 			height: 100%;
 			width: 100%;
 			position: absolute;
 			background-color: rgba(0, 0, 0, 0.5);
+		}
+		.banner-img {
+			width: 100%;
+			height: 300px;
+			background-image: url(/assets/Mobile/laptop-2620118_640.webp);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-color: black;
 		}
 		img {
 			height: 300px;
@@ -245,22 +256,22 @@ nav {
 			background-repeat: no-repeat;
 		}
 		.portfolio-box:nth-child(1) {
-			background-image: url(/assets/Mobile/Przelicznuk\ walut.webp);
+			background-image: url(/assets/Mobile/thumbnailsMobile/Przelicznuk\ walut.webp);
 		}
 		.portfolio-box:nth-child(2) {
-			background-image: url(/assets/Mobile/mobile-version.webp);
+			background-image: url(/assets/Mobile/thumbnailsMobile/mobile-version.webp);
 		}
 		.portfolio-box:nth-child(3) {
-			background-image: url(/assets/Mobile/todolist.webp);
+			background-image: url(/assets/Mobile/thumbnailsMobile/todolist.webp);
 		}
 		.portfolio-box:nth-child(4) {
-			background-image: url(/assets/Mobile/dabrowskiwebsite.webp);
+			background-image: url(/assets/Mobile/thumbnailsMobile/dabrowskiwebsite.webp);
 		}
 		.portfolio-box:nth-child(5) {
-			background-image: url(/assets/Mobile/ai4sectors.webp);
+			background-image: url(/assets/Mobile//thumbnailsMobile/ai4sectors.webp);
 		}
 		.portfolio-box:nth-child(6) {
-			background-image: url(/assets/Mobile/notes.webp);
+			background-image: url(/assets/Mobile/thumbnailsMobile/notes.webp);
 		}
 	}
 }
@@ -360,8 +371,11 @@ footer {
 				}
 			}
 		}
-		.banner-shadow img {
-			height: 500px;
+		.banner-shadow {
+			.banner-img {
+				background-image: url(/assets/tablet/laptop-2620118_1280.webp);
+				height: 500px;
+			}
 		}
 	}
 	.advantages {
@@ -389,6 +403,88 @@ footer {
 				width: 33%;
 				height: 200px;
 				background-position: center;
+			}
+			.portfolio-box:nth-child(1) {
+				background-image: url(/assets//tablet/thumbnailTablet/currencyExchange.webp);
+			}
+			.portfolio-box:nth-child(2) {
+				background-image: url(/assets/tablet/thumbnailTablet/mobileVersion.webp);
+			}
+			.portfolio-box:nth-child(3) {
+				background-image: url(/assets/tablet/thumbnailTablet/toDoApp.webp);
+			}
+			.portfolio-box:nth-child(4) {
+				background-image: url(/assets/tablet/thumbnailTablet/dabrowskiWebsite.webp);
+			}
+			.portfolio-box:nth-child(5) {
+				background-image: url(/assets/tablet/thumbnailTablet/ai4sectors.webp);
+			}
+			.portfolio-box:nth-child(6) {
+				background-image: url(/assets/tablet/thumbnailTablet/myNotes.webp);
+			}
+		}
+	}
+}
+@media (min-width: 992px) {
+	.banner {
+		height: 700px;
+		.banner-content {
+			.banner-btn {
+				.offer {
+					cursor: pointer;
+					transition: background-color 0.5s;
+				}
+				.offer:hover {
+					background-color: c.$secondary-complementary;
+				}
+			}
+		}
+		.banner-shadow {
+			height: 100%;
+			.banner-img {
+				height: 100%;
+				background-image: url(/assets/computer/laptop-2620118_1920.webp);
+			}
+		}
+	}
+	.portfolio {
+		.portfolio-list {
+			.portfolio-box {
+				width: 33%;
+				height: 200px;
+				background-position: center;
+				transition: transform 0.5s;
+			}
+			.portfolio-box:hover {
+				transform: scale(1.05);
+			}
+			.portfolio-box:nth-child(1) {
+				background-image: url(/assets/computer/thumbnailsComputer/currencyexchange.webp);
+			}
+			.portfolio-box:nth-child(2) {
+				background-image: url(/assets/computer/thumbnailsComputer/mobileversion.webp);
+			}
+			.portfolio-box:nth-child(3) {
+				background-image: url(/assets/computer/thumbnailsComputer/toDoApp.webp);
+			}
+			.portfolio-box:nth-child(4) {
+				background-image: url(/assets/computer/thumbnailsComputer/dabrowskiwebsite.webp);
+			}
+			.portfolio-box:nth-child(5) {
+				background-image: url(/assets/computer/thumbnailsComputer/ai4sectors.webp);
+			}
+			.portfolio-box:nth-child(6) {
+				background-image: url(/assets/computer/thumbnailsComputer/myNotes.webp);
+			}
+		}
+	}
+	.form {
+		form {
+			button {
+				transition: background-color 0.5s;
+			}
+			button:hover {
+				background-color: c.$secondary-complementary;
 			}
 		}
 	}

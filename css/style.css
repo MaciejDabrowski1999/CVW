@@ -30,6 +30,14 @@ nav .top-nav {
   height: 80px;
   padding: 1em;
 }
+nav .logo {
+  width: 100px;
+  height: 80px;
+  background-image: url(/assets/Logo_MD.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 nav .menu {
   display: flex;
   flex-direction: row;
@@ -422,6 +430,9 @@ footer p {
     height: 100%;
     background-image: url(/assets/computer/laptop-2620118_1920.webp);
   }
+  .portfolio .portfolio-text i:hover {
+    color: rgb(0, 0, 0);
+  }
   .portfolio .portfolio-list .portfolio-box {
     width: 33%;
     height: 200px;
@@ -454,5 +465,8 @@ footer p {
   }
   .form form button:hover {
     background-color: #2ca9e5;
+  }
+  footer .footer-links a i:hover {
+    color: #0c0db0;
   }
 }/*# sourceMappingURL=style.css.map */

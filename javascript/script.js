@@ -16,20 +16,39 @@ const closeMenu = () => {
 function validateForm() {
 	const testEmail =
 		/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
-	if (inputName.value.trim() !== '' && inputEmail.value.trim() !== '' && testEmail.test(inputEmail.value)) {
+	const testPhone = /[0-9]{9}/
+	if (
+		inputName.value.trim() !== '' &&
+		inputEmail.value.trim() !== '' &&
+		testEmail.test(inputEmail.value) &&
+		inputPhone.value.trim() !== '' &&
+		inputPhone.value.trim() !== '' &&
+		testPhone.test(inputPhone.value) === true
+	) {
 		divErrorName.textContent = ''
 		divErrorEmail.textContent = ''
+		divErrorPhone.textContent = ''
 		console.log('wszystko ok')
 		return false
-	} else if (inputName.value === '') {
+	} else if (inputName.value === '' && inputEmail.value.trim() === '' && inputPhone.value.trim() === '') {
 		divErrorName.textContent = 'Proszę wypełnić pola formularza.'
-	} else if (inputEmail.value.trim() === '' || testEmail.test(inputEmail.value) === false) {
-		divErrorName.textContent = ''
-		divErrorEmail.textContent = 'Proszę wpisać poprawny email'
+		divErrorEmail.textContent = 'Proszę wypełnić pola formularza.'
+		divErrorPhone.textContent = 'Proszę wypełnić pola formularza.'
 	}
-	if (inputPhone.value.trim() !== '' && !/^\d{9}$/.test(inputPhone.value)) {
+	if (inputName.value.trim() === '') {
+		divErrorName.textContent = 'Wpisz swoje Imię'
+	}
+	if (inputEmail.value.trim() === '' || testEmail.test(inputEmail.value) === false) {
+		divErrorEmail.textContent = 'Proszę wpisać poprawny email'
+	} else {
+		divErrorEmail.textContent = ''
+	}
+	if (inputPhone.value.trim() === '') {
+		divErrorPhone.textContent = 'Proszę wpisać 9 cyfrowy numer'
+	} else if (inputPhone.value.trim() !== '' && testPhone.test(inputPhone.value) === false) {
 		divErrorPhone.textContent = 'Niepoprawny numer.'
-		return false
+	} else {
+		divErrorPhone.textContent = ''
 	}
 }
 

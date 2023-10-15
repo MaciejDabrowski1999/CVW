@@ -30,6 +30,14 @@ nav {
 		height: 80px;
 		padding: 1em;
 	}
+	.logo {
+		width: 100px;
+		height: 80px;
+		background-image: url(/assets/Logo_MD.svg);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
 
 	.menu {
 		display: flex;
@@ -448,6 +456,11 @@ footer {
 		}
 	}
 	.portfolio {
+		.portfolio-text {
+			i:hover {
+				color: c.$secondary-font-color;
+			}
+		}
 		.portfolio-list {
 			.portfolio-box {
 				width: 33%;
@@ -485,6 +498,15 @@ footer {
 			}
 			button:hover {
 				background-color: c.$secondary-complementary;
+			}
+		}
+	}
+	footer {
+		.footer-links {
+			a {
+				i:hover {
+					color: c.$third-color;
+				}
 			}
 		}
 	}

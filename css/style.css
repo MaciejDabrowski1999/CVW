@@ -215,7 +215,7 @@ nav #menu-toggle:checked + .menu-button-container .menu-button::after {
   font-size: 48px;
   color: #1360a4;
 }
-.advantages .carousel.slide .carousel-inner .carousel-item .carousel-content h3,
+.advantages .carousel.slide .carousel-inner .carousel-item .carousel-content h2,
 .advantages .carousel.slide .carousel-inner .carousel-item .carousel-content p {
   text-align: center;
   width: 80%;
@@ -248,6 +248,13 @@ nav #menu-toggle:checked + .menu-button-container .menu-button::after {
   height: 100px;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
+}
+.portfolio .portfolio-list .portfolio-box .portfolio-box-item {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
 }
 .portfolio .portfolio-list .portfolio-box:nth-child(1) {
   background-image: url(/assets/Mobile/thumbnailsMobile/Przelicznuk\ walut.webp);
@@ -277,45 +284,84 @@ nav #menu-toggle:checked + .menu-button-container .menu-button::after {
 }
 .form form {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
-.form form .inputs {
+.form form .form-box {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.form form .inputs input {
-  height: 50px;
+.form form .form-box label {
+  font-size: 20px;
+  color: #1360a4;
+}
+.form form .form-box input {
+  height: 55px;
   width: 80%;
-  margin: 10px;
   padding: 0 0 0 10px;
-  border-color: rgb(235, 235, 235);
+  border: 1px solid #0d4270;
 }
-.form form .inputs ::-moz-placeholder {
+.form form .form-box ::-moz-placeholder {
   font-family: "Comfortaa", cursive;
 }
-.form form .inputs ::placeholder {
+.form form .form-box ::placeholder {
   font-family: "Comfortaa", cursive;
 }
-.form form .inputs button {
+.form form .form-box .form-text-message {
+  height: 100px;
+  padding: 10px 0 0 10px;
+  inline-size: 80%;
+  overflow-wrap: break-word;
+  overflow: visible;
+  border: 1px solid #0d4270;
+}
+.form form .form-box .error-text {
+  visibility: hidden;
+  margin: 5px 0 10px 10px;
+  font-size: 14px;
+  color: rgb(0, 137, 250);
+}
+.form form .form-box.error input {
+  border: 1px solid rgb(0, 137, 250);
+  background-color: rgba(0, 137, 250, 0.1);
+}
+.form form .form-box.error .form-text-message {
+  border: 1px solid rgb(0, 137, 250);
+  background-color: rgba(0, 137, 250, 0.1);
+}
+.form form .form-box.error .error-text {
+  visibility: visible;
+}
+.form form .submit {
+  margin: 0 auto;
   width: 60%;
   height: 30px;
   color: #fff;
   border: none;
   background-color: #1360a4;
 }
-.form form .inputs .form-text-message {
-  margin: 10px;
-  padding: 0 0 0 10px;
-  inline-size: 80%;
-  overflow-wrap: break-word;
-  overflow: visible;
+.form .msg-status {
+  display: none;
+  margin: 30px auto 30px auto;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 80px;
+  border-radius: 10px;
 }
-.form form .inputs [class*=error-form] {
-  color: red;
+.form .success {
+  display: flex;
+  background-color: #4bb543;
+}
+.form .error-php {
+  display: flex;
+  background-color: #ff9494;
 }
 .form .desc {
-  color: rgb(235, 235, 235);
+  color: rgb(0, 0, 0);
 }
 
 footer {
@@ -391,7 +437,6 @@ footer p {
   .portfolio .portfolio-list .portfolio-box {
     width: 33%;
     height: 200px;
-    background-position: center;
   }
   .portfolio .portfolio-list .portfolio-box:nth-child(1) {
     background-image: url(/assets//tablet/thumbnailTablet/currencyExchange.webp);
@@ -436,11 +481,7 @@ footer p {
   .portfolio .portfolio-list .portfolio-box {
     width: 33%;
     height: 200px;
-    background-position: center;
     transition: transform 0.5s;
-  }
-  .portfolio .portfolio-list .portfolio-box:hover {
-    transform: scale(1.05);
   }
   .portfolio .portfolio-list .portfolio-box:nth-child(1) {
     background-image: url(/assets/computer/thumbnailsComputer/currencyexchange.webp);
@@ -459,6 +500,9 @@ footer p {
   }
   .portfolio .portfolio-list .portfolio-box:nth-child(6) {
     background-image: url(/assets/computer/thumbnailsComputer/myNotes.webp);
+  }
+  .portfolio .portfolio-list .portfolio-box:hover {
+    transform: scale(1.05);
   }
   .form form button {
     transition: background-color 0.5s;

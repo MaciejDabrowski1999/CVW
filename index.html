@@ -64,7 +64,7 @@
                     <div class="carousel-item active">
                         <div class="carousel-content">
                             <i class="fa-brands fa-square-js"></i>
-                            <h3>Strony oparte na javascript</h3>
+                            <h2>Strony oparte na javascript</h2>
                             <p>Javascript to podstawowy język przeglądarek internetowych, strona internetowa będzie
                                 zawsze działać poprawnie.</p>
                         </div>
@@ -72,21 +72,21 @@
                     <div class="carousel-item">
                         <div class="carousel-content">
                             <i class="fa-solid fa-brain"></i>
-                            <h3>Dobrze przemyślane</h3>
+                            <h2>Dobrze przemyślane</h2>
                             <p>Strony zaprojektowane pod końcowego użytkownika.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="carousel-content">
                             <i class="fa-solid fa-truck-fast"></i>
-                            <h3>Szybkie</h3>
+                            <h2>Szybkie</h2>
                             <p>Zoptymalizowane pod SEO oraz wyszukiwarkę google.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="carousel-content">
                             <i class="fa-solid fa-cart-shopping"></i>
-                            <h3>Tanie</h3>
+                            <h2>Tanie</h2>
                             <p>Strony internetowe w przystępnej cenie</p>
                         </div>
                     </div>
@@ -116,35 +116,52 @@
             </div>
 
             <ul class="portfolio-list">
-                <a class="portfolio-box" href="https://currency-exchange-project-js.netlify.app/" target="_blank"
-                    rel="noopener noreferrer"></a>
-                <a class="portfolio-box" href="https://mobile-version-html-project.netlify.app/" target="_blank"
-                    rel="noopener noreferrer"></a>
-                <a class="portfolio-box" href="https://zingy-entremet-c16f6a.netlify.app/" target="_blank"
-                    rel="noopener noreferrer"></a>
-                <a class="portfolio-box" href="http://dabrowskiwebsite.pl/CV/" target="_blank"
-                    rel="noopener noreferrer"></a>
-                <a class="portfolio-box" href="https://mellifluous-cassata-c943bd.netlify.app/" target="_blank"
-                    rel="noopener noreferrer"></a>
-                <a class="portfolio-box" href="https://tubular-cuchufli-55d1fb.netlify.app/" target="_blank"
-                    rel="noopener noreferrer"></a>
+                <li class="portfolio-box"><a class="portfolio-box-item"
+                        href="https://currency-exchange-project-js.netlify.app/" target="_blank"
+                        rel="noopener noreferrer"></a></li>
+                <li class="portfolio-box"><a class="portfolio-box-item"
+                        href="https://mobile-version-html-project.netlify.app/" target="_blank"
+                        rel="noopener noreferrer"></a></li>
+                <li class="portfolio-box"><a class="portfolio-box-item"
+                        href="https://zingy-entremet-c16f6a.netlify.app/" target="_blank" rel="noopener noreferrer"></a>
+                </li>
+                <li class="portfolio-box"><a class="portfolio-box-item" href="http://dabrowskiwebsite.pl/CV/"
+                        target="_blank" rel="noopener noreferrer"></a></li>
+                <li class="portfolio-box"><a class="portfolio-box-item"
+                        href="https://mellifluous-cassata-c943bd.netlify.app/" target="_blank"
+                        rel="noopener noreferrer"></a></li>
+                <li class="portfolio-box"><a class="portfolio-box-item"
+                        href="https://tubular-cuchufli-55d1fb.netlify.app/" target="_blank"
+                        rel="noopener noreferrer"></a></li>
             </ul>
         </div>
         <div class="form container" id="form">
             <h3 class="form-content">Skontaktuj się ze mną</h3>
-            <form action="" method="post">
-                <div class="inputs">
-                    <input type="text" class="name" id="name" placeholder="Imię i nazwisko*">
-                    <div class="error-form-name"></div>
-                    <input type="tel" class="telephone" id="telephone" placeholder="Telefon*">
-                    <div class="error-form-phone"></div>
-                    <input type="email" class="email" id="email" placeholder="Adres mailowy*">
-                    <div class="error-form-mail"></div>
-                    <textarea type="text" class="form-text-message" id="message" placeholder="Wiadomość" rows="5"
-                        cols="33"></textarea>
-                    <button class="send">Wyślij</button>
+            <form action="/php/mail.php" method="post">
+                <div class="form-box">
+                    <label for="name">Imię i nazwisko*</label>
+                    <input type="text" class="name" id="name" name="name" placeholder="Imię i nazwisko">
+                    <p class="error-text"></p>
                 </div>
+                <div class="form-box">
+                    <label for="phone">Telefon*</label>
+                    <input type="tel" class="phone" id="phone" name="phone" placeholder="Telefon">
+                    <p class="error-text"></p>
+                </div>
+                <div class="form-box">
+                    <label for="email">Email*</label>
+                    <input type="email" class="email" id="email" name="email" placeholder="Adres mailowy">
+                    <p class="error-text"></p>
+                </div>
+                <div class="form-box">
+                    <label for="message">Wiadomość*</label>
+                    <textarea type="text" class="form-text-message" id="message" name="msg"
+                        placeholder="Wiadomość"></textarea>
+                    <p class="error-text"></p>
+                </div>
+                <button class="submit">Wyślij</button>
             </form>
+            <p class="msg-status"></p>
             <p class="desc">*pola obowiązkowe</p>
         </div>
         <footer class="container">

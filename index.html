@@ -10,6 +10,7 @@
         href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&family=Montserrat:wght@100;400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="/css/styleCommon.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -31,7 +32,7 @@
                 </label>
                 <ul class="menu">
                     <li class="menu-link"><a href="#home">Home</a></li>
-                    <li class="menu-link"><a href="#offer">Oferta</a></li>
+                    <li class="menu-link"><a href="/Offer/index.html">Oferta</a></li>
                     <li class="menu-link"><a href="#portfolio">Portfolio</a></li>
                     <li class="menu-link"><a href="#form">Kontakt</a></li>
                 </ul>
@@ -46,7 +47,7 @@
                 </div>
                 <div class="banner-btn">
                     <p>Sprawdź </p>
-                    <button class="offer">Oferta</button>
+                    <button class="offer"><a href="/Offer/index.html">Oferta</a></button>
                 </div>
             </div>
             <div class="banner-shadow" alt="laptop with open coding program">
@@ -125,8 +126,8 @@
                 <li class="portfolio-box"><a class="portfolio-box-item"
                         href="https://zingy-entremet-c16f6a.netlify.app/" target="_blank" rel="noopener noreferrer"></a>
                 </li>
-                <li class="portfolio-box"><a class="portfolio-box-item" href="http://dabrowskiwebsite.pl/CV/"
-                        target="_blank" rel="noopener noreferrer"></a></li>
+                <li class="portfolio-box"><a class="portfolio-box-item" href="./CV/index.html" target="_blank"
+                        rel="noopener noreferrer"></a></li>
                 <li class="portfolio-box"><a class="portfolio-box-item"
                         href="https://mellifluous-cassata-c943bd.netlify.app/" target="_blank"
                         rel="noopener noreferrer"></a></li>
@@ -137,10 +138,10 @@
         </div>
         <div class="form container" id="form">
             <h3 class="form-content">Skontaktuj się ze mną</h3>
-            <form action="/php/mail.php" method="post">
+            <form action="http://dabrowskiwebsite.pl/php/mail.php" method="post">
                 <div class="form-box">
                     <label for="name">Imię i nazwisko*</label>
-                    <input type="text" class="name" id="name" name="name" placeholder="Imię i nazwisko">
+                    <input type="text" class="name" id="name" name="name" placeholder="Imię i nazwisko" required>
                     <p class="error-text"></p>
                 </div>
                 <div class="form-box">

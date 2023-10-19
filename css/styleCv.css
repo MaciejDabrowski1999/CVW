@@ -1,0 +1,511 @@
+html {
+  scroll-behavior: smooth;
+  font-family: "Montserrat", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.up-button {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 36px;
+  width: 50px;
+  height: 50px;
+  bottom: 75px;
+  right: 20px;
+  background-color: rgba(249, 249, 249, 0.85);
+  text-align: center;
+  z-index: 97;
+}
+
+.home {
+  position: fixed;
+  height: 80px;
+  top: 0;
+  z-index: 98;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: uppercase;
+  width: 100%;
+  background-color: rgba(249, 249, 249, 0.85);
+}
+.home .logo {
+  display: flex;
+  justify-content: flex-end;
+}
+.home .logo .pic {
+  background-image: url("/assets/CV/Logo_MD.svg");
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 100px;
+  margin: 0 20px 0 0;
+}
+.home .menu .list {
+  text-align: center;
+  display: block;
+  position: absolute;
+  transition: left 1s ease;
+  top: 80px;
+  left: -100%;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(249, 249, 249);
+  z-index: 99;
+}
+.home .menu .list .item {
+  list-style: none;
+  margin: 10px;
+  font-size: 28px;
+}
+.home div .inputLabel {
+  width: 50%;
+  height: 100%;
+  z-index: 100;
+}
+.home div .inputLabel .line {
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  background-color: black;
+  margin: 20px;
+  transition: all 0.5s ease;
+}
+.home div .inputLabel .line1Position {
+  top: 22px;
+}
+.home div .inputLabel .line1 {
+  margin: 20px;
+  transform: rotate(45deg);
+  transition: transform 0.5s ease;
+}
+.home div .inputLabel .line2Position {
+  top: 5px;
+}
+.home div .inputLabel .line2 {
+  background-color: rgba(0, 0, 0, 0);
+}
+.home div .inputLabel .line3 {
+  transform: rotate(-45deg);
+  transition: transform 0.5s ease;
+}
+.home div .button {
+  display: none;
+}
+
+main {
+  margin-top: 100px;
+}
+
+.about-me {
+  margin: 0 10px;
+}
+.about-me .name {
+  margin: 20px 0;
+  font-size: 24px;
+  color: rgb(19, 96, 164);
+}
+.about-me .name span {
+  color: black;
+}
+.about-me .name .profession {
+  color: rgb(44, 169, 229);
+}
+.about-me .description {
+  font-size: 18px;
+  margin: 20px 0;
+  text-align: justify;
+}
+.about-me .description b {
+  color: rgb(19, 96, 164);
+}
+
+.professional {
+  background-image: url("/assets/CV/computer-416569_1920.jpg");
+  color: rgb(223, 245, 255);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 50vh;
+}
+.professional .shadow {
+  height: 100%;
+  background-color: rgba(19, 96, 164, 0.2);
+}
+.professional .shadow .box {
+  margin: 10px 40px;
+}
+.professional .shadow .box .title {
+  margin: 10px 0;
+  text-align: center;
+  font-size: 36px;
+}
+.professional .shadow .box .container {
+  height: 100%;
+  margin: 10px 0;
+}
+.professional .shadow .box .container div {
+  display: flex;
+  align-items: center;
+}
+.professional .shadow .box .container div .name {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  height: 70px;
+  font-size: 18px;
+  font-weight: 800;
+}
+.professional .shadow .box .container div .bar {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 40px;
+  margin: 0 10px;
+}
+.professional .shadow .box .container div .bar div {
+  height: 15px;
+  background-color: green;
+}
+.professional .shadow .box .container div .bar .js {
+  animation: loadingJs 1s linear forwards;
+}
+.professional .shadow .box .container div .bar .html {
+  animation: loadingHtml 1s linear forwards;
+  animation-delay: 1s;
+}
+.professional .shadow .box .container div .bar .excel {
+  animation: loadingHtml 1s linear forwards;
+  animation-delay: 2s;
+}
+.professional .shadow .box .container div .bar .sql {
+  animation: loadingJs 1s linear forwards;
+  animation-delay: 3s;
+}
+@keyframes loadingJs {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 60%;
+  }
+}
+@keyframes loadingHtml {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+.experience {
+  margin: 0 10px;
+}
+.experience .timeline {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+}
+.experience .timeline .container {
+  position: relative;
+  background-color: inherit;
+  width: 100%;
+}
+.experience .timeline .container .content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+.experience .timeline .container .content .description {
+  color: rgb(44, 169, 229);
+}
+.experience .timeline .left ::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 100%;
+  background-color: rgb(19, 96, 164);
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+.experience .timeline .left .content h2::before {
+  content: "";
+  margin-top: 20px;
+  margin-left: -10px;
+  z-index: 1;
+  background-color: white;
+  width: 25px;
+  height: 25px;
+  border: 3px solid rgb(44, 169, 229);
+  border-radius: 50%;
+}
+.experience .timeline .right ::before {
+  margin: 0 -30px;
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 100%;
+  background-color: rgb(19, 96, 164);
+  top: 0;
+  bottom: 0;
+}
+.experience .timeline .right .content h2::before {
+  margin-top: 20px;
+  margin-left: -40px;
+  z-index: 1;
+  background-color: white;
+  width: 25px;
+  height: 25px;
+  border: 3px solid rgb(44, 169, 229);
+  border-radius: 50%;
+}
+
+.portfolio {
+  margin-bottom: 100px;
+  background-image: url("/assets/CV/portfolio-background-desktop.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.portfolio div {
+  margin: 10px 10px;
+}
+.portfolio .header .hyperlink :hover {
+  font-weight: 700;
+  color: rgb(19, 96, 164);
+}
+.portfolio .list {
+  display: flex;
+  align-items: flex-end;
+  margin: 10px 10px 10px 0;
+  width: 95%;
+  height: 30vh;
+}
+.portfolio .list .item {
+  font-size: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+  height: 15%;
+  transition: width 0.5s ease;
+  transition: height 0.5s ease;
+  transition: margin 0.5s ease;
+}
+.portfolio .list .item a {
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  width: 100%;
+  height: 100%;
+}
+.portfolio .list .item .thumbnail {
+  width: 100%;
+  height: 90%;
+  border-radius: 10px;
+}
+.portfolio .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.portfolio .buttons .button {
+  width: 50%;
+  height: 30px;
+  background-color: rgb(44, 169, 229);
+  border: none;
+  border-radius: 20px;
+  margin: 20px 0;
+}
+.portfolio .buttons :hover {
+  background-color: rgb(70, 120, 164);
+}
+.portfolio .buttons :active {
+  background-color: rgb(70, 120, 164);
+}
+
+.form-contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 60vh;
+  background-color: rgba(19, 96, 164, 0.2);
+  color: rgb(19, 96, 164);
+  border-radius: 10px;
+  margin: 20px 10px;
+}
+.form-contact h2 {
+  text-align: center;
+}
+.form-contact .box {
+  width: 80%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+}
+.form-contact .box div {
+  display: flex;
+  justify-content: space-between;
+}
+.form-contact .box div .input {
+  width: 48%;
+  margin: 10px 0;
+  padding: 0px 10px;
+  height: 50px;
+  border: 3px solid rgb(44, 169, 229);
+}
+.form-contact .box div .input ::-moz-placeholder {
+  font-family: "Montserrat", sans-serif;
+}
+.form-contact .box div .input ::placeholder {
+  font-family: "Montserrat", sans-serif;
+}
+.form-contact .box div .input-email {
+  width: 100%;
+}
+.form-contact .box div .input-error {
+  border: 3px solid red;
+}
+.form-contact .box .message {
+  resize: none;
+  margin: 10px 0;
+  padding: 10px 10px;
+  height: 80%;
+  border: 3px solid rgb(44, 169, 229);
+}
+.form-contact .box .message :placeholder {
+  font-family: "Montserrat", sans-serif;
+}
+.form-contact .box .input-error {
+  border: 3px solid red;
+}
+.form-contact .box .button {
+  height: 30%;
+  width: 100%;
+  margin: 0 0 10px 0;
+  background-color: rgb(44, 169, 229);
+  border: none;
+}
+.form-contact .box .button:active {
+  background-color: rgb(19, 96, 164);
+}
+.form-contact .box .button:hover {
+  background-color: rgb(19, 96, 164);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 300px;
+  color: white;
+  background-color: rgb(19, 96, 164);
+}
+footer .contact {
+  margin: 0 20px 0 20px;
+}
+footer .contact .logo {
+  text-align: center;
+  width: 100%;
+  margin: 10px 0;
+  font-size: 36px;
+}
+footer .contact .logo a {
+  color: white;
+}
+footer .contact .phone a {
+  color: white;
+}
+
+.input-error {
+  border: 2px solid red;
+}
+
+@media (min-width: 576px) {
+  .home .menu .list {
+    right: 100%;
+  }
+  .home .logo .pic {
+    background-image: url("/assets/CV/Logo_MD.svg");
+    width: 150px;
+    height: 50px;
+  }
+  main {
+    margin-top: 100px;
+  }
+  .professional {
+    height: 400px;
+  }
+  .professional .professional .shadow .box .container div .name {
+    width: 20%;
+  }
+  .professional .professional .shadow .box .container div .bar {
+    width: 60%;
+  }
+  .experience .timeline .container {
+    width: 50%;
+  }
+  .experience .timeline .left {
+    margin-left: -10px;
+  }
+  .experience .timeline .left h2::before {
+    margin-left: -10px;
+  }
+  .experience .timeline .left ::before {
+    margin: 0;
+    right: 0;
+    left: 100%;
+  }
+  .experience .timeline .right {
+    right: -50%;
+    margin-left: -10px;
+  }
+  .experience .timeline .right ::before {
+    margin: 0;
+    left: 0;
+  }
+  .experience .timeline .right .content h2::before {
+    margin-left: -10px;
+  }
+}
+@media (min-width: 768px) {
+  .home {
+    height: 150px;
+    position: relative;
+  }
+  .home .menu .list {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+  }
+  .home div .inputLabel {
+    display: none;
+  }
+  .home div .button {
+    display: none;
+  }
+  main {
+    margin-top: 0;
+  }
+}/*# sourceMappingURL=styleCv.css.map */

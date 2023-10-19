@@ -14,140 +14,6 @@ body {
 	}
 }
 
-nav {
-	position: sticky;
-	z-index: 100;
-	top: 0;
-	width: 100%;
-	.top-nav {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
-		background-color: c.$bgc-nav-foot;
-		/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-		color: #fff;
-		height: 80px;
-		padding: 1em;
-	}
-	.logo {
-		width: 100px;
-		height: 80px;
-		background-image: url(/assets/Logo_MD.svg);
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: contain;
-	}
-
-	.menu {
-		display: flex;
-		flex-direction: row;
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
-		li {
-			margin: 0 1rem;
-			overflow: hidden;
-			a {
-				color: c.$secondary-font-color;
-			}
-		}
-	}
-
-	.menu-button-container {
-		display: none;
-		height: 100%;
-		width: 30px;
-		cursor: pointer;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
-
-	#menu-toggle {
-		display: none;
-	}
-
-	.menu-button,
-	.menu-button::before,
-	.menu-button::after {
-		display: block;
-		background-color: c.$secondary-font-color;
-		position: absolute;
-		height: 4px;
-		width: 30px;
-		transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
-		border-radius: 2px;
-	}
-
-	.menu-button::before {
-		content: '';
-		margin-top: -8px;
-	}
-
-	.menu-button::after {
-		content: '';
-		margin-top: 8px;
-	}
-
-	#menu-toggle:checked + .menu-button-container .menu-button::before {
-		margin-top: 0px;
-		transform: rotate(405deg);
-	}
-
-	#menu-toggle:checked + .menu-button-container .menu-button {
-		background: rgba(255, 255, 255, 0);
-	}
-
-	#menu-toggle:checked + .menu-button-container .menu-button::after {
-		margin-top: 0px;
-		transform: rotate(-405deg);
-	}
-
-	@media (max-width: 700px) {
-		.menu-button-container {
-			display: flex;
-		}
-		.menu {
-			position: absolute;
-			top: 0;
-			margin-top: 80px;
-			left: 0;
-			flex-direction: column;
-			width: 100%;
-			justify-content: center;
-			align-items: center;
-			background-color: rgb(249, 249, 249);
-			li {
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				width: 100%;
-				background: rgb(249, 249, 249);
-				height: 0;
-				margin: 0;
-				padding: 0;
-				border: 0;
-				transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-				a {
-					font-size: 36px;
-					color: c.$secondary-font-color;
-				}
-			}
-			li:not(:last-child) {
-				border-bottom: none;
-			}
-		}
-
-		#menu-toggle:checked ~ .menu li {
-			border-bottom: 1px solid c.$main-theme;
-			text-align: center;
-			height: 80px;
-			padding: 0.5em;
-			transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-		}
-	}
-}
 .banner {
 	position: relative;
 	height: 300px;
@@ -170,12 +36,22 @@ nav {
 		.banner-btn {
 			color: c.$primary-font-color;
 			.offer {
+				display: flex;
+				justify-content: center;
+				align-items: center;
 				color: c.$primary-font-color;
 				width: 100px;
 				height: 25px;
 				border: 1px solid c.$primary-font-color;
 				transition: background-color 0.5s;
 				background-color: transparent;
+				a {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					width: 100px;
+					height: 100%;
+				}
 			}
 			.offer:active {
 				background-color: c.$secondary-complementary;
@@ -377,25 +253,7 @@ nav {
 		color: c.$secondary-font-color;
 	}
 }
-footer {
-	background-color: c.$bgc-nav-foot;
-	width: 100%;
-	height: 100px;
-	color: c.$secondary-font-color;
-	.footer-links {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		a {
-			font-size: 36px;
-			margin: 0 10px;
-			color: c.$secondary-font-color;
-		}
-	}
-	p {
-		text-align: center;
-	}
-}
+
 @media (min-width: 768px) {
 	.banner {
 		height: 500px;
@@ -544,15 +402,6 @@ footer {
 			}
 			button:hover {
 				background-color: c.$secondary-complementary;
-			}
-		}
-	}
-	footer {
-		.footer-links {
-			a {
-				i:hover {
-					color: c.$third-color;
-				}
 			}
 		}
 	}

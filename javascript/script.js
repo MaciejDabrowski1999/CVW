@@ -56,7 +56,7 @@ const checkForm = input => {
 const checkLength = (input, min) => {
 	if (input.value.length < min && input === name) {
 		showError(input, `${input.previousElementSibling.innerText.slice(0, -1)} jest za krótkie`)
-	} else if (input.value.length < min) {
+	} else if (input.value.length < min && input === message) {
 		showError(input, `${input.previousElementSibling.innerText.slice(0, -1)} jest za krótka`)
 	}
 }
@@ -89,7 +89,7 @@ const checkErrors = () => {
 			errorCount++
 		}
 	})
-
+	console.log(errorCount)
 	if (errorCount === 0) {
 		mailFunction()
 	}
@@ -97,7 +97,7 @@ const checkErrors = () => {
 submit.addEventListener('click', e => {
 	e.preventDefault()
 
-	checkForm([name, phone, email])
+	checkForm([name, phone, email, message])
 	checkEmail(email)
 	checkLength(name, 3)
 	checkLength(message, 5)

@@ -1,2 +1,42 @@
 @use 'colors' as c;
 
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+.banner {
+	height: 300px;
+	.carousel-inner {
+		height: 100%;
+		.carousel-item {
+			height: 300px;
+			.carousel-content {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-wrap: wrap;
+			}
+		}
+	}
+	.carousel-item-next,
+	.carousel-item-prev,
+	.carousel-item.active {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.carousel-control-prev-icon {
+		background-image: none;
+		i {
+			color: c.$secondary-font-color;
+		}
+	}
+	.carousel-control-next-icon {
+		background-image: none;
+		i {
+			color: c.$secondary-font-color;
+		}
+	}
+}

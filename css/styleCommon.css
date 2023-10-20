@@ -1,3 +1,12 @@
+body {
+  font-family: "Comfortaa", cursive;
+  background-color: #333;
+}
+body a {
+  text-decoration: none;
+  color: rgb(235, 235, 235);
+}
+
 nav {
   position: sticky;
   z-index: 100;
@@ -122,6 +131,95 @@ nav #menu-toggle:checked + .menu-button-container .menu-button::after {
   }
 }
 
+.form {
+  text-align: center;
+  margin: 20px 0;
+}
+.form .form-content {
+  color: #1360a4;
+}
+.form form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.form form .form-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.form form .form-box label {
+  font-size: 20px;
+  color: #1360a4;
+}
+.form form .form-box input {
+  height: 55px;
+  width: 80%;
+  padding: 0 0 0 10px;
+  border: 1px solid #0d4270;
+}
+.form form .form-box ::-moz-placeholder {
+  font-family: "Comfortaa", cursive;
+}
+.form form .form-box ::placeholder {
+  font-family: "Comfortaa", cursive;
+}
+.form form .form-box .form-text-message {
+  height: 100px;
+  padding: 10px 0 0 10px;
+  inline-size: 80%;
+  overflow-wrap: break-word;
+  overflow: visible;
+  border: 1px solid #0d4270;
+}
+.form form .form-box .error-text {
+  visibility: hidden;
+  margin: 5px 0 10px 10px;
+  font-size: 14px;
+  color: rgb(0, 137, 250);
+}
+.form form .form-box.error input {
+  border: 1px solid rgb(0, 137, 250);
+  background-color: rgba(0, 137, 250, 0.1);
+}
+.form form .form-box.error .form-text-message {
+  border: 1px solid rgb(0, 137, 250);
+  background-color: rgba(0, 137, 250, 0.1);
+}
+.form form .form-box.error .error-text {
+  visibility: visible;
+}
+.form form .submit {
+  margin: 0 auto;
+  width: 60%;
+  height: 30px;
+  color: #fff;
+  border: none;
+  background-color: #1360a4;
+}
+.form .msg-status {
+  display: none;
+  margin: 30px auto 30px auto;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 80px;
+  border-radius: 10px;
+}
+.form .success {
+  display: flex;
+  background-color: #4bb543;
+}
+.form .error-php {
+  display: flex;
+  background-color: #ff9494;
+}
+.form .desc {
+  color: rgb(0, 0, 0);
+}
+
 footer {
   background-color: rgba(249, 249, 249, 0.85);
   width: 100%;
@@ -145,5 +243,11 @@ footer p {
 @media (min-width: 992px) {
   footer .footer-links a i:hover {
     color: #0c0db0;
+  }
+  .form form button {
+    transition: background-color 0.5s;
+  }
+  .form form button:hover {
+    background-color: #2ca9e5;
   }
 }/*# sourceMappingURL=styleCommon.css.map */

@@ -5,14 +5,6 @@
 	padding: 0;
 	margin: 0;
 }
-body {
-	font-family: 'Comfortaa', cursive;
-	background-color: #333;
-	a {
-		text-decoration: none;
-		color: c.$primary-font-color;
-	}
-}
 
 .banner {
 	position: relative;
@@ -166,93 +158,6 @@ body {
 		}
 	}
 }
-.form {
-	text-align: center;
-	margin: 20px 0;
-	.form-content {
-		color: c.$main-theme;
-	}
-	form {
-		width: 100%;
-		display: flex;
-		justify-content: center;
-		flex-direction: column;
-		.form-box {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			flex-direction: column;
-			label {
-				font-size: 20px;
-				color: c.$main-theme;
-			}
-			input {
-				height: 55px;
-				width: 80%;
-				padding: 0 0 0 10px;
-				border: 1px solid c.$first-complementary;
-			}
-			::placeholder {
-				font-family: 'Comfortaa', cursive;
-			}
-			.form-text-message {
-				height: 100px;
-				padding: 10px 0 0 10px;
-				inline-size: 80%;
-				overflow-wrap: break-word;
-				overflow: visible;
-				border: 1px solid c.$first-complementary;
-			}
-			.error-text {
-				visibility: hidden;
-				margin: 5px 0 10px 10px;
-				font-size: 14px;
-				color: rgb(0, 137, 250);
-			}
-		}
-		.form-box.error {
-			input {
-				border: 1px solid rgb(0, 137, 250);
-				background-color: rgba(0, 137, 250, 0.1);
-			}
-			.form-text-message {
-				border: 1px solid rgb(0, 137, 250);
-				background-color: rgba(0, 137, 250, 0.1);
-			}
-			.error-text {
-				visibility: visible;
-			}
-		}
-		.submit {
-			margin: 0 auto;
-			width: 60%;
-			height: 30px;
-			color: #fff;
-			border: none;
-			background-color: c.$main-theme;
-		}
-	}
-	.msg-status {
-		display: none;
-		margin: 30px auto 30px auto;
-		justify-content: center;
-		align-items: center;
-		width: 80%;
-		height: 80px;
-		border-radius: 10px;
-	}
-	.success {
-		display: flex;
-		background-color: c.$green-succes;
-	}
-	.error-php {
-		display: flex;
-		background-color: c.$red-error;
-	}
-	.desc {
-		color: c.$secondary-font-color;
-	}
-}
 
 @media (min-width: 768px) {
 	.banner {
@@ -392,16 +297,6 @@ body {
 
 			.portfolio-box:hover {
 				transform: scale(1.05);
-			}
-		}
-	}
-	.form {
-		form {
-			button {
-				transition: background-color 0.5s;
-			}
-			button:hover {
-				background-color: c.$secondary-complementary;
 			}
 		}
 	}

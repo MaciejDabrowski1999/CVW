@@ -95,9 +95,13 @@
 	.wall {
 		margin: 20px 1em 10px 1em;
 		.desc-name {
+			position: sticky;
+			top: 80px;
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			background-color: c.$third-complementary;
+			border-radius: 10px;
 			.desc-name-header {
 				font-size: 16px;
 				font-weight: 700;
@@ -119,7 +123,7 @@
 				align-items: center;
 				.desc-value-option-i {
 					width: 30%;
-					height: 50px;
+					height: 40px;
 					border-radius: 10px;
 					background-color: rgba($color: c.$main-theme, $alpha: 0.1);
 					display: flex;

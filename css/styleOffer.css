@@ -95,9 +95,13 @@
   margin: 20px 1em 10px 1em;
 }
 .descOption .wall .desc-name {
+  position: sticky;
+  top: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #d7e5f1;
+  border-radius: 10px;
 }
 .descOption .wall .desc-name .desc-name-header {
   font-size: 16px;
@@ -119,7 +123,7 @@
 }
 .descOption .wall .desc-value .desc-value-option .desc-value-option-i {
   width: 30%;
-  height: 50px;
+  height: 40px;
   border-radius: 10px;
   background-color: rgba(19, 96, 164, 0.1);
   display: flex;

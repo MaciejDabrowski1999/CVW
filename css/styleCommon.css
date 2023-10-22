@@ -7,6 +7,16 @@ body a {
   color: rgb(235, 235, 235);
 }
 
+.wrapper .container,
+.wrapper .container-fluid,
+.wrapper .container-lg,
+.wrapper .container-md,
+.wrapper .container-sm,
+.wrapper .container-xl,
+.wrapper .container-xxl {
+  --bs-gutter-x: 0;
+}
+
 nav {
   position: sticky;
   z-index: 100;

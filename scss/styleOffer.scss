@@ -42,8 +42,11 @@
 }
 .offer-choice {
 	text-align: center;
-	background-color: rgba($color: #1360a4, $alpha: 0.2);
+	background-color: rgba($color: c.$main-theme, $alpha: 0.2);
 	border-radius: 5px;
+	h3 {
+		padding: 15px 0 0 0;
+	}
 	.offer-choice-content {
 		display: flex;
 		justify-content: center;
@@ -56,12 +59,15 @@
 			align-items: center;
 			flex-wrap: wrap;
 			flex-direction: column;
-			margin: 10px 20px;
+			margin: 20px 20px;
 			label {
 				display: flex;
 				justify-content: center;
 				align-items: center;
 				flex-direction: column;
+				p {
+					margin: 15px 0 5px 0;
+				}
 			}
 			.offer-content-img {
 				height: 300px;
@@ -71,12 +77,61 @@
 				display: none;
 			}
 			button {
+				text-align: center;
+				text-transform: uppercase;
+				font-weight: 500;
 				margin: 0 auto;
 				width: 100px;
 				height: 30px;
 				color: #fff;
 				border: none;
+				border-radius: 5px;
 				background-color: c.$main-theme;
+			}
+		}
+	}
+}
+.descOption {
+	.wall {
+		margin: 20px 1em 10px 1em;
+		.desc-name {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			.desc-name-header {
+				font-size: 16px;
+				font-weight: 700;
+				text-align: center;
+				border-right: solid 1px c.$secondary-font-color;
+			}
+			.desc-name-header:last-child {
+				border-right: none;
+			}
+		}
+		.desc-value {
+			h4 {
+				margin: 10px 0 0 0;
+			}
+			.desc-value-option {
+				margin: 20px 0 0 0;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				.desc-value-option-i {
+					width: 30%;
+					height: 50px;
+					border-radius: 10px;
+					background-color: rgba($color: c.$main-theme, $alpha: 0.1);
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					.fa-check {
+						color: c.$green-succes;
+					}
+					.fa-xmark {
+						color: c.$red-error;
+					}
+				}
 			}
 		}
 	}

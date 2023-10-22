@@ -7,6 +7,9 @@ body a {
   color: rgb(235, 235, 235);
 }
 
+.wrapper {
+  font-family: "Comfortaa", cursive;
+}
 .wrapper .container,
 .wrapper .container-fluid,
 .wrapper .container-lg,

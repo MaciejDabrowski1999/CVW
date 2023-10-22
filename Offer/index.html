@@ -32,7 +32,6 @@
                 <ul class="menu">
                     <li class="menu-link"><a href="/index.html">Home</a></li>
                     <li class="menu-link"><a href="#offer">Oferta</a></li>
-                    <li class="menu-link"><a href="#portfolio">Portfolio</a></li>
                     <li class="menu-link"><a href="#form">Kontakt</a></li>
                 </ul>
             </section>
@@ -71,34 +70,87 @@
                 </button>
             </div>
         </section>
-        <section class="offer-choice container">
+        <section class="offer-choice container" id="offer">
             <h3>Wybór oferty</h3>
             <div class="offer-choice-content">
                 <div class="offer-content-box">
                     <label for="offerBasic">
                         <img src="/assets/mdwOffer/basicOffer.png" alt="Presentation of the offer choice"
-                            class="offer-content-img img-fluid">Strona Wizytówka Podstawowa
+                            class="offer-content-img img-fluid">
+                        <p>Strona Wizytówka Podstawowa</p>
                     </label>
-                    <input type="radio" name="basic" id="offerBasic">
+                    <input type="checkbox" name="basic" id="offerBasic">
                     <button>Wybieram</button>
                 </div>
                 <div class="offer-content-box">
                     <label for="offerAdvance">
                         <img src="/assets/mdwOffer/basicOffer.png" alt="Presentation of the offer choice"
-                            class="offer-content-img img-fluid">Strona Wizytówka Zawansowana
+                            class="offer-content-img img-fluid">
+                        <p>Strona Wizytówka Zawansowana</p>
                     </label>
-                    <input type="radio" name="basic" id="offerAdvance">
+                    <input type="checkbox" name="basic" id="offerAdvance">
                     <button>Wybieram</button>
-
                 </div>
                 <div class="offer-content-box">
                     <label for="offerPremium">
                         <img src="/assets/mdwOffer/basicOffer.png" alt="Presentation of the offer choice"
-                            class="offer-content-img img-fluid">Strona Wizytówka Premium
+                            class="offer-content-img img-fluid">
+                        <p>Strona Wizytówka Premium</p>
                     </label>
-                    <input type="radio" name="basic" id="offerPremium">
+                    <input type="checkbox" name="basic" id="offerPremium">
                     <button>Wybieram</button>
-
+                </div>
+            </div>
+        </section>
+        <section class="descOption container">
+            <div class="wall">
+                <div class="desc-header">
+                    <h3>Porównaj</h3>
+                </div>
+                <div class="desc-name">
+                    <div class="desc-name-header basic">Strona Wizytówka Podstawowa</div>
+                    <div class="desc-name-header advanced">Strona Wizytówka Zawansowana</div>
+                    <div class="desc-name-header premium">Strona Wizytówka Premium</div>
+                </div>
+                <div class="desc-value">
+                    <h4>Zmiana kolorystyki</h4>
+                    <div class="desc-value-option">
+                        <div class="desc-value-option-i basic"><i class="fa-solid fa-check"></i></div>
+                        <div class="desc-value-option-i advanced"><i class="fa-solid fa-check"></i></div>
+                        <div class="desc-value-option-i premium"><i class="fa-solid fa-check"></i></div>
+                    </div>
+                </div>
+                <div class="desc-value">
+                    <h4>Edycja elementów</h4>
+                    <div class="desc-value-option">
+                        <div class="desc-value-option-i basic"><i class="fa-solid fa-xmark"></i></div>
+                        <div class="desc-value-option-i advanced"><i class="fa-solid fa-check"></i></div>
+                        <div class="desc-value-option-i premium"><i class="fa-solid fa-check"></i></div>
+                    </div>
+                </div>
+                <div class="desc-value">
+                    <h4>Prełna personalizacja</h4>
+                    <div class="desc-value-option">
+                        <div class="desc-value-option-i basic"><i class="fa-solid fa-xmark"></i></div>
+                        <div class="desc-value-option-i advanced"><i class="fa-solid fa-xmark"></i></div>
+                        <div class="desc-value-option-i premium"><i class="fa-solid fa-check"></i></div>
+                    </div>
+                </div>
+                <div class="desc-value">
+                    <h4>Tworzenie contentu</h4>
+                    <div class="desc-value-option">
+                        <div class="desc-value-option-i basic"><i class="fa-solid fa-xmark"></i></div>
+                        <div class="desc-value-option-i advanced"><i class="fa-solid fa-check"></i></div>
+                        <div class="desc-value-option-i premium"><i class="fa-solid fa-check"></i></div>
+                    </div>
+                </div>
+                <div class="desc-value">
+                    <h4>Tworzenie contentu</h4>
+                    <div class="desc-value-option">
+                        <div class="desc-value-option-i basic"><i class="fa-solid fa-xmark"></i></div>
+                        <div class="desc-value-option-i advanced"><i class="fa-solid fa-check"></i></div>
+                        <div class="desc-value-option-i premium"><i class="fa-solid fa-check"></i></div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -145,11 +197,10 @@
             <p>Maciej Dąbrowski 2023</p>
         </footer>
     </div>
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+    <script src="/Offer/javascript/script.js"></script>
 </body>
 
 </html>

@@ -44,6 +44,9 @@
   background-color: rgba(19, 96, 164, 0.2);
   border-radius: 5px;
 }
+.offer-choice h3 {
+  padding: 15px 0 0 0;
+}
 .offer-choice .offer-choice-content {
   display: flex;
   justify-content: center;
@@ -57,13 +60,16 @@
   align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
-  margin: 10px 20px;
+  margin: 20px 20px;
 }
 .offer-choice .offer-choice-content .offer-content-box label {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+.offer-choice .offer-choice-content .offer-content-box label p {
+  margin: 15px 0 5px 0;
 }
 .offer-choice .offer-choice-content .offer-content-box .offer-content-img {
   height: 300px;
@@ -73,10 +79,56 @@
   display: none;
 }
 .offer-choice .offer-choice-content .offer-content-box button {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
   margin: 0 auto;
   width: 100px;
   height: 30px;
   color: #fff;
   border: none;
+  border-radius: 5px;
   background-color: #1360a4;
+}
+
+.descOption .wall {
+  margin: 20px 1em 10px 1em;
+}
+.descOption .wall .desc-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.descOption .wall .desc-name .desc-name-header {
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  border-right: solid 1px rgb(0, 0, 0);
+}
+.descOption .wall .desc-name .desc-name-header:last-child {
+  border-right: none;
+}
+.descOption .wall .desc-value h4 {
+  margin: 10px 0 0 0;
+}
+.descOption .wall .desc-value .desc-value-option {
+  margin: 20px 0 0 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.descOption .wall .desc-value .desc-value-option .desc-value-option-i {
+  width: 30%;
+  height: 50px;
+  border-radius: 10px;
+  background-color: rgba(19, 96, 164, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.descOption .wall .desc-value .desc-value-option .desc-value-option-i .fa-check {
+  color: #4bb543;
+}
+.descOption .wall .desc-value .desc-value-option .desc-value-option-i .fa-xmark {
+  color: #ff9494;
 }/*# sourceMappingURL=styleOffer.css.map */

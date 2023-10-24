@@ -98,12 +98,13 @@
   position: sticky;
   top: 80px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  background-color: #d7e5f1;
+  background-color: #e7eff6;
   border-radius: 10px;
 }
 .descOption .wall .desc-name .desc-name-header {
+  width: 33%;
   font-size: 16px;
   font-weight: 700;
   text-align: center;
@@ -111,6 +112,9 @@
 }
 .descOption .wall .desc-name .desc-name-header:last-child {
   border-right: none;
+}
+.descOption .wall .desc-name .desc-name-header.none {
+  display: none;
 }
 .descOption .wall .desc-value h4 {
   margin: 10px 0 0 0;
@@ -135,4 +139,54 @@
 }
 .descOption .wall .desc-value .desc-value-option .desc-value-option-i .fa-xmark {
   color: #ff9494;
+}
+
+@media (min-width: 768px) {
+  .banner {
+    height: 500px;
+  }
+  .banner .carousel-inner .carousel-item {
+    height: 500px;
+  }
+  .banner .carousel-inner .carousel-item .carousel-content {
+    flex-direction: column;
+  }
+  .offer-choice .offer-choice-content {
+    flex-direction: row;
+    margin: 10px 0px 20px 0px;
+  }
+  .offer-choice .offer-choice-content .offer-content-box {
+    margin: 0px 0 20px 0;
+  }
+  .offer-choice .offer-choice-content .offer-content-box button {
+    margin: 10px 0 0 0;
+  }
+  .descOption .wall .desc-name .desc-name-header.none {
+    display: block;
+  }
+  .descOption .wall .desc-name .desc-name-header {
+    width: 25%;
+  }
+  .descOption .wall .desc-value {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .descOption .wall .desc-value h4 {
+    font-size: 16px;
+    width: 300px;
+    margin: 0 0 0 10px;
+  }
+  .descOption .wall .desc-value .desc-value-option {
+    margin: 0;
+    width: 100%;
+  }
+  .descOption .wall .desc-value .desc-value-option .desc-value-option-i {
+    height: 50px;
+    background-color: transparent;
+  }
+  .descOption .wall .desc-value:nth-child(even) {
+    border-radius: 10px;
+    background-color: rgba(19, 96, 164, 0.1);
+  }
 }/*# sourceMappingURL=styleOffer.css.map */

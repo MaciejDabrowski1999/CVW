@@ -74,11 +74,12 @@
 				min-width: 200px;
 			}
 			input {
-				display: none;
+				// display: none;
 			}
 			button {
 				text-align: center;
 				text-transform: uppercase;
+				cursor: pointer;
 				font-weight: 500;
 				margin: 0 auto;
 				width: 100px;
@@ -173,9 +174,11 @@
 			.desc-name {
 				.desc-name-header.none {
 					display: block;
+					width: 25%;
 				}
 				.desc-name-header {
-					width: 25%;
+					border: none;
+					width: 30%;
 				}
 			}
 
@@ -185,7 +188,7 @@
 				align-items: center;
 				h4 {
 					font-size: 16px;
-					width: 300px;
+					width: 25%;
 					margin: 0 0 0 10px;
 				}
 				.desc-value-option {
@@ -205,4 +208,37 @@
 	}
 }
 @media (min-width: 992px) {
+	.offer-choice {
+		.offer-choice-content {
+			.offer-content-box {
+				label {
+					margin: 0px 10px;
+					p {
+						width: 70%;
+						text-wrap: wrap;
+						font-weight: 700;
+					}
+				}
+				button:hover {
+					background-color: c.$secondary-complementary;
+				}
+			}
+		}
+	}
+	.descOption {
+		.wall {
+			.desc-name {
+				height: 80px;
+				.desc-name-header {
+					width: 30%;
+				}
+			}
+			.desc-value {
+				height: 50px;
+				h4 {
+					font-size: 18px;
+				}
+			}
+		}
+	}
 }

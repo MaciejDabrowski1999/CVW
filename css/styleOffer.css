@@ -75,12 +75,10 @@
   height: 300px;
   min-width: 200px;
 }
-.offer-choice .offer-choice-content .offer-content-box input {
-  display: none;
-}
 .offer-choice .offer-choice-content .offer-content-box button {
   text-align: center;
   text-transform: uppercase;
+  cursor: pointer;
   font-weight: 500;
   margin: 0 auto;
   width: 100px;
@@ -163,9 +161,11 @@
   }
   .descOption .wall .desc-name .desc-name-header.none {
     display: block;
+    width: 25%;
   }
   .descOption .wall .desc-name .desc-name-header {
-    width: 25%;
+    border: none;
+    width: 30%;
   }
   .descOption .wall .desc-value {
     display: flex;
@@ -174,7 +174,7 @@
   }
   .descOption .wall .desc-value h4 {
     font-size: 16px;
-    width: 300px;
+    width: 25%;
     margin: 0 0 0 10px;
   }
   .descOption .wall .desc-value .desc-value-option {
@@ -188,5 +188,30 @@
   .descOption .wall .desc-value:nth-child(even) {
     border-radius: 10px;
     background-color: rgba(19, 96, 164, 0.1);
+  }
+}
+@media (min-width: 992px) {
+  .offer-choice .offer-choice-content .offer-content-box label {
+    margin: 0px 10px;
+  }
+  .offer-choice .offer-choice-content .offer-content-box label p {
+    width: 70%;
+    text-wrap: wrap;
+    font-weight: 700;
+  }
+  .offer-choice .offer-choice-content .offer-content-box button:hover {
+    background-color: #2ca9e5;
+  }
+  .descOption .wall .desc-name {
+    height: 80px;
+  }
+  .descOption .wall .desc-name .desc-name-header {
+    width: 30%;
+  }
+  .descOption .wall .desc-value {
+    height: 50px;
+  }
+  .descOption .wall .desc-value h4 {
+    font-size: 18px;
   }
 }/*# sourceMappingURL=styleOffer.css.map */

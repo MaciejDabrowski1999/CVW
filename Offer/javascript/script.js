@@ -10,6 +10,23 @@ const msgStatus = document.querySelector('.msg-status')
 const offerInput = document.querySelectorAll('.offer-content-box input')
 const offerButton = document.querySelectorAll('.offer-content-box button')
 const offerLabel = document.querySelectorAll('.offer-content-box label')
+const chosenOffer = document.querySelector('.form-offer-checked')
+
+const addToMsg = el => {
+	let offerText = el.parentNode.childNodes[1].childNodes[1].innerText
+	let shortOffer = offerText.slice(17)
+	console.log(shortOffer)
+	let chosenText = chosenOffer.innerHTML
+	if (el.checked === true && !chosenText.includes(shortOffer)) {
+		chosenOffer.innerHTML = offerText
+	}
+	//else if (el.checked === true && !chosenText.includes(shortOffer)) {
+	// 	chosenOffer.textContent = offerText
+	// }
+}
+// const name = (params) => {
+
+// }
 
 const clickOffer = () => {
 	//on click you change state offerinput form checked to unchecked
@@ -20,11 +37,10 @@ const clickOffer = () => {
 		if (el.checked === true) {
 			el.nextElementSibling.textContent = 'Wybrano'
 			el.nextElementSibling.style.backgroundColor = '#2ca9e5'
-			console.log('ok')
+			addToMsg(el)
 		} else {
 			el.nextElementSibling.textContent = 'Wybieram'
 			el.nextElementSibling.style.backgroundColor = '#1360a4'
-			console.log('no')
 		}
 	})
 }
@@ -109,7 +125,6 @@ menuList.addEventListener('click', closeMenu)
 offerButton.forEach(el => {
 	el.addEventListener('click', el => {
 		if (el.target.previousElementSibling.checked === true) {
-			console.log('ok')
 			el.target.previousElementSibling.checked = false
 		} else {
 			el.target.previousElementSibling.checked = true
@@ -118,5 +133,9 @@ offerButton.forEach(el => {
 	})
 })
 offerLabel.forEach(el => {
-	el.addEventListener('clcik', clickOffer())
+	el.addEventListener('click', () => {
+		setTimeout(() => {
+			clickOffer()
+		}, 50)
+	})
 })

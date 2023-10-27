@@ -18,7 +18,7 @@ const addToMsg = el => {
 	console.log(shortOffer)
 	let chosenText = chosenOffer.innerHTML
 	if (el.checked === true && !chosenText.includes(shortOffer)) {
-		chosenText.concat(chosenText, ` ${offerText}`)
+		chosenText.concat(' ', offerText)
 	}
 	//else if (el.checked === true && !chosenText.includes(shortOffer)) {
 	// 	chosenOffer.textContent = offerText

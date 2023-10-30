@@ -12,21 +12,23 @@ const offerButton = document.querySelectorAll('.offer-content-box button')
 const offerLabel = document.querySelectorAll('.offer-content-box label')
 const chosenOffer = document.querySelector('.form-offer-checked')
 
-const addToMsg = el => {
-	let offerText = el.parentNode.childNodes[1].childNodes[1].innerText
+const addToMsg = offerText => {
 	let shortOffer = offerText.slice(17)
 	console.log(shortOffer)
 	let chosenText = chosenOffer.innerHTML
 	if (el.checked === true && !chosenText.includes(shortOffer)) {
-		chosenOffer.textContent = `${chosenText} ${<br></br>} ${offerText}`
+		chosenOffer.innerHTML = `${chosenText} <br></br> ${offerText}`
 	}
-	//else if (el.checked === true && !chosenText.includes(shortOffer)) {
-	// 	chosenOffer.textContent = offerText
-	// }
-}
-// const name = (params) => {
 
-// }
+}
+const removeFromMsg = (offerText) => {
+	let shortOffer = offerText.slice(17)
+	console.log(shortOffer)
+	let chosenText = chosenOffer.innerHTML
+	if (el.checked === false && chosenText.includes(shortOffer)) {
+		chosenText.replace(offerText, '')
+	}
+}
 
 const clickOffer = () => {
 	//on click you change state offerinput form checked to unchecked
@@ -34,13 +36,15 @@ const clickOffer = () => {
 	//funcion change button color and text if inputoffer was checked
 
 	offerInput.forEach(el => {
+		let offerText = el.parentNode.childNodes[1].childNodes[1].innerText
 		if (el.checked === true) {
 			el.nextElementSibling.textContent = 'Wybrano'
 			el.nextElementSibling.style.backgroundColor = '#2ca9e5'
-			addToMsg(el)
+			addToMsg(offerText)
 		} else {
 			el.nextElementSibling.textContent = 'Wybieram'
 			el.nextElementSibling.style.backgroundColor = '#1360a4'
+			removeFromMsg(offerText)
 		}
 	})
 }

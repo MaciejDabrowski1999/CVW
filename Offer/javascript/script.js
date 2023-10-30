@@ -12,7 +12,8 @@ const offerButton = document.querySelectorAll('.offer-content-box button')
 const offerLabel = document.querySelectorAll('.offer-content-box label')
 const chosenOffer = document.querySelector('.form-offer-checked')
 
-const addToMsg = offerText => {
+const addToMsg = el => {
+	let offerText = el.parentNode.childNodes[1].childNodes[1].innerText
 	let shortOffer = offerText.slice(17)
 	console.log(shortOffer)
 	let chosenText = chosenOffer.innerHTML
@@ -21,7 +22,8 @@ const addToMsg = offerText => {
 	}
 
 }
-const removeFromMsg = (offerText) => {
+const removeFromMsg = (el) => {
+	let offerText = el.parentNode.childNodes[1].childNodes[1].innerText
 	let shortOffer = offerText.slice(17)
 	console.log(shortOffer)
 	let chosenText = chosenOffer.innerHTML
@@ -36,7 +38,6 @@ const clickOffer = () => {
 	//funcion change button color and text if inputoffer was checked
 
 	offerInput.forEach(el => {
-		let offerText = el.parentNode.childNodes[1].childNodes[1].innerText
 		if (el.checked === true) {
 			el.nextElementSibling.textContent = 'Wybrano'
 			el.nextElementSibling.style.backgroundColor = '#2ca9e5'

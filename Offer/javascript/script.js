@@ -41,11 +41,11 @@ const clickOffer = () => {
 		if (el.checked === true) {
 			el.nextElementSibling.textContent = 'Wybrano'
 			el.nextElementSibling.style.backgroundColor = '#2ca9e5'
-			addToMsg(offerText)
+			addToMsg(el)
 		} else {
 			el.nextElementSibling.textContent = 'Wybieram'
 			el.nextElementSibling.style.backgroundColor = '#1360a4'
-			removeFromMsg(offerText)
+			removeFromMsg(el)
 		}
 	})
 }

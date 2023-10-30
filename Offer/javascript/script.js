@@ -28,7 +28,7 @@ const removeFromMsg = (el) => {
 	console.log(shortOffer)
 	let chosenText = chosenOffer.innerHTML
 	if (el.checked === false && chosenText.includes(shortOffer)) {
-		chosenText.replace(offerText, '')
+		chosenText.replace(`Strona `+`Wizytówka `+ shortOffer, '')
 	}
 }
 

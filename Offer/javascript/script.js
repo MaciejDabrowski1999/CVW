@@ -14,11 +14,11 @@ const chosenOffer = document.querySelector('.form-offer-checked')
 
 const addToMsg = el => {
 	let offerText = el.parentNode.childNodes[1].childNodes[1].innerText
-	let shortOffer = offerText.toLowerCase().slice(17)
+	let shortOffer = offerText.slice(17)
 	console.log(shortOffer)
 	let chosenText = chosenOffer.innerHTML
-	if (el.checked === true && !chosenText.toLowerCase().includes(shortOffer)) {
-		chosenOffer = chosenText +' ' + offerText
+	if (el.checked === true && !chosenText.includes(shortOffer)) {
+		chosenOffer.textContent = chosenText + ' ' + offerText
 	}
 	//else if (el.checked === true && !chosenText.includes(shortOffer)) {
 	// 	chosenOffer.textContent = offerText

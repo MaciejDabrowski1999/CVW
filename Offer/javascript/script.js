@@ -18,15 +18,19 @@ const addToMsg = el => {
 	console.log(shortOffer)
 	let chosenText = chosenOffer.innerHTML
 	if (el.checked === true && !chosenText.includes(shortOffer)) {
-		chosenOffer.textContent = offerText
+		chosenOffer.innerHTML = `${chosenText} <br></br> ${offerText}`
 	}
-	//else if (el.checked === true && !chosenText.includes(shortOffer)) {
-	// 	chosenOffer.textContent = offerText
-	// }
-}
-// const name = (params) => {
 
-// }
+}
+const removeFromMsg = (el) => {
+	let offerText = el.parentNode.childNodes[1].childNodes[1].innerText
+	let shortOffer = offerText.slice(17)
+	console.log(shortOffer)
+	let chosenText = chosenOffer.innerHTML
+	if (el.checked === false && chosenText.includes(shortOffer)) {
+		chosenText.replace(`Strona Wizytówka ${shortOffer}`, '')
+	}
+}
 
 const clickOffer = () => {
 	//on click you change state offerinput form checked to unchecked
@@ -41,6 +45,7 @@ const clickOffer = () => {
 		} else {
 			el.nextElementSibling.textContent = 'Wybieram'
 			el.nextElementSibling.style.backgroundColor = '#1360a4'
+			removeFromMsg(el)
 		}
 	})
 }

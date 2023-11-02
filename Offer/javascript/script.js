@@ -11,24 +11,25 @@ const offerInput = document.querySelectorAll('.offer-content-box input')
 const offerButton = document.querySelectorAll('.offer-content-box button')
 const offerLabel = document.querySelectorAll('.offer-content-box label')
 const chosenOffer = document.querySelector('.form-offer-checked')
+const offerClassic = document.querySelector('.classic')
+const offerAdvance = document.querySelector('.advance')
+const offerPremium = document.querySelector('.premium')
 
 const addToMsg = el => {
 	let offerText = el.parentNode.childNodes[1].childNodes[1].innerText
 	let shortOffer = offerText.slice(17)
-	console.log(shortOffer)
 	let chosenText = chosenOffer.innerHTML
 	if (el.checked === true && !chosenText.includes(shortOffer)) {
-		chosenOffer.innerHTML = `${chosenText} <br></br> ${offerText}`
+		chosenOffer.innerHTML = `${chosenText} ${offerText}`
 	}
-
 }
-const removeFromMsg = (el) => {
+const removeFromMsg = el => {
 	let offerText = el.parentNode.childNodes[1].childNodes[1].innerText
 	let shortOffer = offerText.slice(17)
-	console.log(shortOffer)
 	let chosenText = chosenOffer.innerHTML
-	if (el.checked === false && chosenText.includes(shortOffer)) {
-		chosenText.replace(`Strona Wizytówka ${shortOffer}`, '')
+	if (el.checked === false && chosenText.includes(offerText)) {
+		chosenOffer.textContent = ''
+		clickOffer()
 	}
 }
 
